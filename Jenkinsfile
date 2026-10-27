@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Ejecutando pruebas Karate...'
                 // Nota: Verifica si es @Smoke o @Smock. Si no usas tags, solo pon 'mvn test'
-                sh 'mvn clean test '
+                sh 'mvn clean test -f myproject/pom.xml'
             }
         }
 
