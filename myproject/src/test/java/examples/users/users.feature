@@ -5,39 +5,25 @@ Feature: Crud para crear Usuario
     * header Accept = 'application/json'
     * header Content-Type = 'application/json'
     * header Authorization = 'Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954'
-     * def dataGenerator = Java.type('Utils.DataGenerator')
-
-
- Feature: Crud para crear Usuario
-
-  Background:
-    * url 'https://gorest.co.in/public/v2'
-    * header Accept = 'application/json'
-    * header Content-Type = 'application/json'
-    * header Authorization = 'Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954'
-    * def req_headers = {Authorization: 'Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954'}
-   
- * def dataGenerator = Java.type('Utils.DataGenerator') 
-
-* def payload =
+    * def dataGenerator = Java.type('Utils.DataGenerator')
+    * def payload =
         """
-            {
-                "gender":"male", 
-                "status":"active"
-            }
-        """    
+        {
+            "gender": "male",
+            "status": "active"
+        }
+        """
     * payload.name = dataGenerator.getUserRandom().name
-    * payload.email = dataGenerator.getUserRandom().email 
-
+    * payload.email = dataGenerator.getUserRandom().email
 
   Scenario: Crear un nuevo usuario exitosamente
     Given path 'users'
     And request
     """
     {
-      	"name": "Tenali Ramakrishna",
+      "name": "Tenali Ramakrishna",
       "gender": "male",
-      "email": "8testing991@gmail.com",
+      "email": "8testing99@gmail.com",
       "status": "active"
     }
     """

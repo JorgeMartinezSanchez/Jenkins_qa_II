@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: examples.ExamplesTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.524 s <<< FAILURE! - in examples.ExamplesTest
-examples.ExamplesTest.testParallel  Time elapsed: 1.445 s  <<< ERROR!
-java.lang.RuntimeException: mismatched input 'F' expecting <EOF>
-	at com.intuit.karate.core.FeatureParser.parse(FeatureParser.java:74)
-	at com.intuit.karate.core.Feature.read(Feature.java:63)
-	at com.intuit.karate.resource.ResourceUtils.findFeatureFiles(ResourceUtils.java:95)
-	at com.intuit.karate.Runner$Builder.resolveAll(Runner.java:249)
-	at com.intuit.karate.Suite.<init>(Suite.java:171)
-	at com.intuit.karate.Runner$Builder.parallel(Runner.java:516)
-	at examples.ExamplesTest.testParallel(ExamplesTest.java:14)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.158 s - in examples.ExamplesTest
