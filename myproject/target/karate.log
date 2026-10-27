@@ -1,0 +1,324 @@
+09:38:23.451 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:38:25.384 [pool-2-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+09:38:25.384 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+09:38:25.384 [pool-2-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+09:38:25.384 [pool-2-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+09:38:25.458 [pool-2-thread-3] ERROR com.intuit.karate - classpath:examples/users/users.feature:55
+And request payload
+js failed:
+>>>>
+01: payload
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "payload" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:55
+09:38:25.459 [pool-2-thread-2] ERROR com.intuit.karate - classpath:examples/users/users.feature:35
+* def emailFake = dataGenerator.getEmailRandom()
+js failed:
+>>>>
+01: dataGenerator.getEmailRandom()
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "dataGenerator" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:35
+09:38:25.705 [pool-2-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://gorest.co.in/public/v2/users
+1 > Accept: application/json
+1 > Content-Type: application/json
+1 > Authorization: Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954
+1 > Host: gorest.co.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.19)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:38:25.705 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://gorest.co.in/public/v2/users
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Authorization: Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954
+1 > Content-Length: 95
+1 > Host: gorest.co.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.19)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Tenali Ramakrishna","gender":"male","email":"8testing991@gmail.com","status":"active"}
+
+09:38:27.740 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 2025
+1 < 422
+1 < Date: Thu, 20 Aug 2026 13:38:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 54
+1 < Connection: keep-alive
+1 < Cache-Control: no-cache
+1 < content-security-policy-report-only: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-4iaEnv1u4S4uKoJxTqpERA=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+1 < feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
+1 < referrer-policy: strict-origin-when-cross-origin
+1 < strict-transport-security: max-age=63072000; includeSubDomains
+1 < vary: Origin
+1 < x-content-type-options: nosniff
+1 < x-frame-options: SAMEORIGIN
+1 < x-permitted-cross-domain-policies: none
+1 < x-ratelimit-limit: 300
+1 < x-ratelimit-remaining: 298
+1 < x-ratelimit-reset: 0
+1 < x-request-id: 21cede33-43eb-43f2-b308-2dd52e8f45dd
+1 < x-runtime: 0.139605
+1 < x-xss-protection: 0
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=NdeXJYwMfR3Vde%2BtUhRNeLbn5Ey8bumPvEODTUWP2PjbYDzQ7cS1sZ4Hup56GtjErg%2B8oKKC4tSXhjYrSySKzOKQjn7usWUjqxRBZOhCF%2Bm%2FTn%2FzJNn%2BU%2BB%2BLQbo02g%3D"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < cf-cache-status: DYNAMIC
+1 < Server: cloudflare
+1 < CF-RAY: a2e1cc678b7ed965-MIA
+1 < alt-svc: h3=":443"; ma=86400
+[{"field":"email","message":"has already been taken"}]
+
+09:38:27.741 [pool-2-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 2030
+1 < 200
+1 < Date: Thu, 20 Aug 2026 13:38:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Cache-Control: max-age=0, private, must-revalidate
+1 < content-security-policy-report-only: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-TVlA9rtTIauFqYt9JE84qA=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+1 < etag: W/"14c202f59f01c309afef2799d219afd6"
+1 < feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
+1 < referrer-policy: strict-origin-when-cross-origin
+1 < strict-transport-security: max-age=63072000; includeSubDomains
+1 < vary: Origin
+1 < x-content-type-options: nosniff
+1 < x-frame-options: SAMEORIGIN
+1 < x-links-current: https://gorest.co.in/public/v2/users?page=1
+1 < x-links-next: https://gorest.co.in/public/v2/users?page=2
+1 < x-links-previous: 
+1 < x-pagination-limit: 10
+1 < x-pagination-page: 1
+1 < x-pagination-pages: 336
+1 < x-pagination-total: 3359
+1 < x-permitted-cross-domain-policies: none
+1 < x-ratelimit-limit: 300
+1 < x-ratelimit-remaining: 299
+1 < x-ratelimit-reset: 0
+1 < x-request-id: fa02b7af-f4bc-452a-bc18-4c224a998f46
+1 < x-runtime: 0.076318
+1 < x-xss-protection: 0
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=CRUG79y%2FKcpd%2BpAXtx2Oh7GsMiww%2BaqzCYeXFkOLIN7MaWYBBxnYRFiG6b6ZesDU1XpqSIjWgsiV%2B2lFqxsQCgT0Bv5QnhdjAFizXWB1cs%2Fvn76juGlZeMiec%2BV8w5o%3D"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < cf-cache-status: DYNAMIC
+1 < Server: cloudflare
+1 < CF-RAY: a2e1cc67889fb08e-ATL
+1 < alt-svc: h3=":443"; ma=86400
+[{"id":8585002,"name":"Chester Lang","email":"ermelinda21@test.com","gender":"male","status":"active"},{"id":8585001,"name":"Tenali Ramakrishna","email":"pruebasssssss@gmail.com","gender":"male","status":"active"},{"id":8585000,"name":"Garland Durgan","email":"christopher59@test.com","gender":"male","status":"active"},{"id":8584999,"name":"Caryl Wilkinson","email":"brent71@test.com","gender":"male","status":"active"},{"id":8584998,"name":"Billy Frami","email":"test222381@gmail.com","gender":"male","status":"active"},{"id":8584997,"name":"Winnifred Ward","email":"kendal1167@test.com","gender":"male","status":"active"},{"id":8584996,"name":"Kelsey Hamill","email":"allyson89@test.com","gender":"male","status":"active"},{"id":8584993,"name":"Usuario Actualizado","email":"maxwell69@test.com","gender":"male","status":"active"},{"id":8584995,"name":"Willetta Quitzon","email":"ross93@test.com","gender":"female","status":"active"},{"id":8584992,"name":"Keturah Hoeger","email":"ignacia15@test.com","gender":"male","status":"active"}]
+
+09:38:27.777 [pool-2-thread-1] ERROR com.intuit.karate - classpath:examples/users/users.feature:22
+Then status 201
+status code was: 422, expected: 201, response time in milliseconds: 2025, url: https://gorest.co.in/public/v2/users, response: 
+[{"field":"email","message":"has already been taken"}]
+classpath:examples/users/users.feature:22
+09:38:27.779 [pool-2-thread-4] ERROR com.intuit.karate - classpath:examples/users/users.feature:69
+Then status 201
+status code was: 200, expected: 201, response time in milliseconds: 2030, url: https://gorest.co.in/public/v2/users, response: 
+[{"id":8585002,"name":"Chester Lang","email":"ermelinda21@test.com","gender":"male","status":"active"},{"id":8585001,"name":"Tenali Ramakrishna","email":"pruebasssssss@gmail.com","gender":"male","status":"active"},{"id":8585000,"name":"Garland Durgan","email":"christopher59@test.com","gender":"male","status":"active"},{"id":8584999,"name":"Caryl Wilkinson","email":"brent71@test.com","gender":"male","status":"active"},{"id":8584998,"name":"Billy Frami","email":"test222381@gmail.com","gender":"male","status":"active"},{"id":8584997,"name":"Winnifred Ward","email":"kendal1167@test.com","gender":"male","status":"active"},{"id":8584996,"name":"Kelsey Hamill","email":"allyson89@test.com","gender":"male","status":"active"},{"id":8584993,"name":"Usuario Actualizado","email":"maxwell69@test.com","gender":"male","status":"active"},{"id":8584995,"name":"Willetta Quitzon","email":"ross93@test.com","gender":"female","status":"active"},{"id":8584992,"name":"Keturah Hoeger","email":"ignacia15@test.com","gender":"male","status":"active"}]
+classpath:examples/users/users.feature:69
+09:38:28.972 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) classpath:examples/users/users.feature
+09:42:56.743 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:42:56.752 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1787233376748
+09:42:58.535 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+09:42:58.535 [pool-2-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+09:42:58.535 [pool-2-thread-4] INFO  com.intuit.karate - karate.env system property was: null 
+09:42:58.536 [pool-2-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+09:42:58.630 [pool-2-thread-2] ERROR com.intuit.karate - classpath:examples/users/users.feature:35
+* def emailFake = dataGenerator.getEmailRandom()
+js failed:
+>>>>
+01: dataGenerator.getEmailRandom()
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "dataGenerator" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:35
+09:42:58.630 [pool-2-thread-3] ERROR com.intuit.karate - classpath:examples/users/users.feature:55
+And request payload
+js failed:
+>>>>
+01: payload
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "payload" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:55
+09:42:58.886 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://gorest.co.in/public/v2/users
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Authorization: Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954
+1 > Content-Length: 95
+1 > Host: gorest.co.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.19)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Tenali Ramakrishna","gender":"male","email":"8testing991@gmail.com","status":"active"}
+
+09:42:58.886 [pool-2-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://gorest.co.in/public/v2/users
+1 > Accept: application/json
+1 > Content-Type: application/json
+1 > Authorization: Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954
+1 > Host: gorest.co.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.19)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:43:00.854 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1956
+1 < 422
+1 < Date: Thu, 20 Aug 2026 13:43:00 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 54
+1 < Connection: keep-alive
+1 < Cache-Control: no-cache
+1 < content-security-policy-report-only: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-EiUByF1/mJuwYYvFBrYOrg=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+1 < feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
+1 < referrer-policy: strict-origin-when-cross-origin
+1 < strict-transport-security: max-age=63072000; includeSubDomains
+1 < vary: Origin
+1 < x-content-type-options: nosniff
+1 < x-frame-options: SAMEORIGIN
+1 < x-permitted-cross-domain-policies: none
+1 < x-ratelimit-limit: 300
+1 < x-ratelimit-remaining: 299
+1 < x-ratelimit-reset: 0
+1 < x-request-id: ade49361-78ca-4fa2-b044-3391735259b1
+1 < x-runtime: 0.064267
+1 < x-xss-protection: 0
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < cf-cache-status: DYNAMIC
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=epn0n4bErSJKIYNFQ6YcM6f8167WsmMsP89eKsnVBHb328zhm0lSRYUSBf6GNSzbT%2B1ygR4oKkNlzJyQzLtJXiRyqb9nsyOktCWJCjbIMJgS3BdeM1r31RRqdI175ls%3D"}]}
+1 < Server: cloudflare
+1 < CF-RAY: a2e1d310dd095f15-EWR
+1 < alt-svc: h3=":443"; ma=86400
+[{"field":"email","message":"has already been taken"}]
+
+09:43:00.886 [pool-2-thread-1] ERROR com.intuit.karate - classpath:examples/users/users.feature:22
+Then status 201
+status code was: 422, expected: 201, response time in milliseconds: 1956, url: https://gorest.co.in/public/v2/users, response: 
+[{"field":"email","message":"has already been taken"}]
+classpath:examples/users/users.feature:22
+09:43:00.953 [pool-2-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 2063
+1 < 200
+1 < Date: Thu, 20 Aug 2026 13:43:00 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < Cache-Control: max-age=0, private, must-revalidate
+1 < content-security-policy-report-only: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-ateNjCUW28pUVRcQY6i9sA=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+1 < etag: W/"5fef20a12ce8326942ec7ceda33a2c8c"
+1 < feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
+1 < referrer-policy: strict-origin-when-cross-origin
+1 < strict-transport-security: max-age=63072000; includeSubDomains
+1 < vary: Origin
+1 < x-content-type-options: nosniff
+1 < x-frame-options: SAMEORIGIN
+1 < x-links-current: https://gorest.co.in/public/v2/users?page=1
+1 < x-links-next: https://gorest.co.in/public/v2/users?page=2
+1 < x-links-previous: 
+1 < x-pagination-limit: 10
+1 < x-pagination-page: 1
+1 < x-pagination-pages: 337
+1 < x-pagination-total: 3366
+1 < x-permitted-cross-domain-policies: none
+1 < x-ratelimit-limit: 300
+1 < x-ratelimit-remaining: 298
+1 < x-ratelimit-reset: 0
+1 < x-request-id: 086d7014-8663-426a-9b48-17db8603852f
+1 < x-runtime: 0.052523
+1 < x-xss-protection: 0
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < cf-cache-status: DYNAMIC
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TP83LcaVsXlwnDSsa5meCjZLF%2BE6uY8Vz%2Fj%2FqfBS24fNmgtLpRfAS%2Fz7qbhlN7gzIq9jlGDw88x2bCxidOnl9RcAAZUsTYg0Rb%2FNYSW4zoEj0waNiAAT5GAU%2BFVwhvs%3D"}]}
+1 < Server: cloudflare
+1 < CF-RAY: a2e1d310eb86bce3-ATL
+1 < alt-svc: h3=":443"; ma=86400
+[{"id":8585024,"name":"Tenali Ramakrishna","email":"user_1787233314249@gmail.com","gender":"male","status":"active"},{"id":8585022,"name":"Tenali Ramakrishna","email":"user_1787233314032@gmail.com","gender":"male","status":"active"},{"id":8585021,"name":"Raymundo Berge","email":"timmy10@test.com","gender":"male","status":"active"},{"id":8585020,"name":"Ignacia Douglas","email":"royce9767@test.com","gender":"male","status":"active"},{"id":8585019,"name":"Anastasia Hegmann","email":"agustin9067@test.com","gender":"male","status":"active"},{"id":8585014,"name":"Roselle Prohaska DVM","email":"kathie.schinner@yahoo.com","gender":"male","status":"active"},{"id":8585013,"name":"Kieth Steuber","email":"jessi.fadel@gmail.com","gender":"male","status":"active"},{"id":8585002,"name":"Chester Lang","email":"ermelinda21@test.com","gender":"male","status":"active"},{"id":8585001,"name":"Tenali Ramakrishna","email":"pruebasssssss@gmail.com","gender":"male","status":"active"},{"id":8585000,"name":"Garland Durgan","email":"christopher59@test.com","gender":"male","status":"active"}]
+
+09:43:00.962 [pool-2-thread-4] ERROR com.intuit.karate - classpath:examples/users/users.feature:69
+Then status 201
+status code was: 200, expected: 201, response time in milliseconds: 2063, url: https://gorest.co.in/public/v2/users, response: 
+[{"id":8585024,"name":"Tenali Ramakrishna","email":"user_1787233314249@gmail.com","gender":"male","status":"active"},{"id":8585022,"name":"Tenali Ramakrishna","email":"user_1787233314032@gmail.com","gender":"male","status":"active"},{"id":8585021,"name":"Raymundo Berge","email":"timmy10@test.com","gender":"male","status":"active"},{"id":8585020,"name":"Ignacia Douglas","email":"royce9767@test.com","gender":"male","status":"active"},{"id":8585019,"name":"Anastasia Hegmann","email":"agustin9067@test.com","gender":"male","status":"active"},{"id":8585014,"name":"Roselle Prohaska DVM","email":"kathie.schinner@yahoo.com","gender":"male","status":"active"},{"id":8585013,"name":"Kieth Steuber","email":"jessi.fadel@gmail.com","gender":"male","status":"active"},{"id":8585002,"name":"Chester Lang","email":"ermelinda21@test.com","gender":"male","status":"active"},{"id":8585001,"name":"Tenali Ramakrishna","email":"pruebasssssss@gmail.com","gender":"male","status":"active"},{"id":8585000,"name":"Garland Durgan","email":"christopher59@test.com","gender":"male","status":"active"}]
+classpath:examples/users/users.feature:69
+09:43:02.179 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) classpath:examples/users/users.feature
+09:43:44.907 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:43:44.914 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1787233424911
+09:43:46.903 [pool-2-thread-3] INFO  com.intuit.karate - karate.env system property was: null 
+09:43:46.903 [pool-2-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+09:43:46.903 [pool-2-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+09:43:47.003 [pool-2-thread-2] ERROR com.intuit.karate - classpath:examples/users/users.feature:35
+* def emailFake = dataGenerator.getEmailRandom()
+js failed:
+>>>>
+01: dataGenerator.getEmailRandom()
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "dataGenerator" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:35
+09:43:47.003 [pool-2-thread-3] ERROR com.intuit.karate - classpath:examples/users/users.feature:55
+And request payload
+js failed:
+>>>>
+01: payload
+<<<<
+org.graalvm.polyglot.PolyglotException: ReferenceError: "payload" is not defined
+- <js>.:program(Unnamed:1)
+
+classpath:examples/users/users.feature:55
+09:43:47.331 [pool-2-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://gorest.co.in/public/v2/users
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Authorization: Bearer 700d0c7a86eb84028bf5cd204b11587f812f9d7cd880dc4edbdbd1d407ae9954
+1 > Content-Length: 95
+1 > Host: gorest.co.in
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.19)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Tenali Ramakrishna","gender":"male","email":"8testing991@gmail.com","status":"active"}
+
+09:43:49.249 [pool-2-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1905
+1 < 422
+1 < Date: Thu, 20 Aug 2026 13:43:49 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 54
+1 < Connection: keep-alive
+1 < Cache-Control: no-cache
+1 < content-security-policy-report-only: default-src 'self'; script-src 'self' https://pagead2.googlesyndication.com 'nonce-wE1TolQe3Fx+RQ+5VIQ/Wg=='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pagead2.googlesyndication.com https://ep1.adtrafficquality.google; frame-src https://googleads.g.doubleclick.net https://ep2.adtrafficquality.google https://www.google.com; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+1 < feature-policy: camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'
+1 < referrer-policy: strict-origin-when-cross-origin
+1 < strict-transport-security: max-age=63072000; includeSubDomains
+1 < vary: Origin
+1 < x-content-type-options: nosniff
+1 < x-frame-options: SAMEORIGIN
+1 < x-permitted-cross-domain-policies: none
+1 < x-ratelimit-limit: 300
+1 < x-ratelimit-remaining: 299
+1 < x-ratelimit-reset: 0
+1 < x-request-id: 863c50a8-4610-4e47-a025-0485c87ca049
+1 < x-runtime: 0.144428
+1 < x-xss-protection: 0
+1 < Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=87WOAtl8moNOOM9g%2FmXJ0YAFE37z3GCaiH72yx2Q%2BdmwMnbXZvvBjlL4Ni3plGwWz0zXawHsHtJ9XvkFX5mJGoactKoAP%2BqwCt%2BfxeCEZS%2F6RLQha2B6UAiRINglq1o%3D"}]}
+1 < Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+1 < cf-cache-status: DYNAMIC
+1 < Server: cloudflare
+1 < CF-RAY: a2e1d44158b842c8-EWR
+1 < alt-svc: h3=":443"; ma=86400
+[{"field":"email","message":"has already been taken"}]
+
+09:43:49.286 [pool-2-thread-1] ERROR com.intuit.karate - classpath:examples/users/users.feature:22
+Then status 201
+status code was: 422, expected: 201, response time in milliseconds: 1905, url: https://gorest.co.in/public/v2/users, response: 
+[{"field":"email","message":"has already been taken"}]
+classpath:examples/users/users.feature:22
+09:43:50.231 [pool-3-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 1 (0 remaining) classpath:examples/users/users.feature
+09:51:29.818 [main] ERROR c.intuit.karate.core.FeatureParser - not a valid feature file: examples/users/users.feature - mismatched input 'F' expecting <EOF>
