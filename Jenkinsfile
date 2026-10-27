@@ -2,30 +2,26 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven-3.8.5' // Nombre del Maven configurado en Jenkins
-        jdk 'Java17'   // Nombre del JDK configurado en Jenkins
+        maven 'Maven-3.8.5'
+        jdk 'Java17'
     }
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                echo 'Clonando el repositorio...'
-                git branch: 'main', url: 'https://github.com/JorgeMartinezSanchez/Jenkins_qa_II.git'
-            }
-        }
+        // Eliminamos la etapa de Checkout porque Jenkins ya lo hace por defecto.
 
         stage('Build & Test') {
             steps {
                 echo 'Ejecutando pruebas Karate...'
-                bat 'mvn test -Dkarate.options="--tags @Smock"'
+                // Nota: Verifica si es @Smoke o @Smock. Si no usas tags, solo pon 'mvn test'
+                sh 'mvn clean test '
             }
         }
 
         stage('Publicar Reporte') {
             steps {
                 echo 'Publicando reporte HTML de Karate...'
-                publishHTML([
+                // Este paso requiere que el plugin "HTML Publisher" esté instalado en Jenkins.
+                publishHTML(target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
@@ -38,15 +34,16 @@ pipeline {
     }
 
     post {
-        always {
-            echo 'Pipeline finalizado — limpiando workspace.'
-            cleanWs()
-        }
+        // Quitamos cleanWs() de aquí para no borrar los reportes que acabamos de generar.
+        // Jenkins guarda los reportes en su propio espacio de trabajo seguro.
         success {
             echo 'Pruebas Karate ejecutadas con éxito.'
         }
         failure {
             echo 'Falló alguna etapa del pipeline.'
+        }
+        always {
+            echo 'Pipeline finalizado.'
         }
     }
 }
