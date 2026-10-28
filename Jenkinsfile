@@ -25,7 +25,7 @@ pipeline {
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
                     keepAll: true,
-                    reportDir: 'target/karate-reports',
+                    reportDir: 'myproject/target/karate-reports',
                     reportFiles: 'karate-summary.html',
                     reportName: 'Reporte de Pruebas Karate'
                 ])
