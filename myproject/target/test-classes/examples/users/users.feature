@@ -27,7 +27,7 @@ Feature: Crud para crear Usuario
     {
       id: '#number',
       name: "Tenali Ramakrishna",
-      email: "#(emailUnico)", # <--- OJO AQUÍ
+      email: "#(emailUnico)",
       gender: "male",
       status: "active"
     }
