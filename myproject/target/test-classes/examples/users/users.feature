@@ -18,15 +18,9 @@ Feature: Crud para crear Usuario
 
   Scenario: Crear un nuevo usuario exitosamente
     Given path 'users'
-    And request
-    """
-    {
-      "name": "Tenali Ramakrishna",
-      "gender": "male",
-      "email": "8testing99@gmail.com",
-      "status": "active"
-    }
-    """
+    * def emailUnico = 'test' + java.util.UUID.randomUUID() + '@gmail.com'
+    And request {"name":"Tenali Ramakrishna","gender":"male","email":"#(emailUnico)","status":"active"}
+    Then status 201
     When method post
     Then status 201
     And match response ==
