@@ -20,7 +20,6 @@ Feature: Crud para crear Usuario
     Given path 'users'
     * def emailUnico = 'test' + java.util.UUID.randomUUID() + '@gmail.com'
     And request {"name":"Tenali Ramakrishna","gender":"male","email":"#(emailUnico)","status":"active"}
-    Then status 201
     When method post
     Then status 201
     And match response ==
@@ -28,7 +27,7 @@ Feature: Crud para crear Usuario
     {
       id: '#number',
       name: "Tenali Ramakrishna",
-      email: "8testing99@gmail.com",
+      email: "#(emailUnico)", # <--- OJO AQUÍ
       gender: "male",
       status: "active"
     }
